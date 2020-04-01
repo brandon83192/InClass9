@@ -13,8 +13,8 @@ namespace NationalParks.APIHandlerManager
     // data.gov developer network, i.e. all data sources on data.gov.
     // https://www.nps.gov/subjects/developer/get-started.htm
 
-    static string BASE_URL = "https://developer.nps.gov/api/v1/";
-    static string API_KEY = ""; //Add your API key here inside ""
+    static string BASE_URL = "https://api.fda.gov/drug/";
+    static string API_KEY = "2JShIjNE8xQ9ULvYvZxNaXN66qZJku1Qk0xmXihe"; //Add your API key here inside ""
 
     HttpClient httpClient;
 
@@ -38,7 +38,7 @@ namespace NationalParks.APIHandlerManager
     /// <returns></returns>
     public Parks GetParks()
     {
-      string NATIONAL_PARK_API_PATH = BASE_URL + "/parks?limit=20";
+      string NATIONAL_PARK_API_PATH = BASE_URL + "event.json?limit=20";
       string parksData = "";
 
       Parks parks = null;
